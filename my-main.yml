@@ -9,3 +9,10 @@
     ## linuxist is from "ansible-galaxy collection init linuxist.my_collection" and then inside of it I ran "ansible-galaxy role init chrony"
     - web   # this is a simpel anxible-galaxy role named 'web' declared to use the role
     - linuxist.my_collection.chrony  ##### this is out new ansible-galaxy collection role declared to use which we created earlier
+
+  tasks:
+    - name: Display Data
+      ansible.builtin.debug:
+        msg: "{{ 'Hello Ansible' | upper_case }}"
+ 
+          #"{{ 'Hello Ansible' | linuxist.my_collection.upper_case  }}"
