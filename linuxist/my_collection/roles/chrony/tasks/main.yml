@@ -1,0 +1,13 @@
+---
+- name: Install Chrony
+  become: true
+  ansible.builtin.dnf:
+    name: chrony
+    state: present
+
+- name: Enable timeserver/Chronyd Service
+  become: true
+  ansible.builtin.service:
+    name: chronyd
+    state: started
+    enable: true
