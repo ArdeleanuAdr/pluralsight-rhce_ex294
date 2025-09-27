@@ -2,6 +2,8 @@
 
 Documentation for the collection.
 
+COMMANDS USED TO INITIALIZE A Collection in Ansible Galaxy
+You then went inside of the collection and created a role with ansible-galaxy role init
 
   ansible-galaxy collection list
   ansible-galaxy collection init linuxist.my_collection
