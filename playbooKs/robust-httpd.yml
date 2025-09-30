@@ -1,61 +1,61 @@
 ---
 - name: Test error Handling
   hosts: localhost
-  gather_facts: true
+  gather_facts: false
   become: true
   ignore_errors: false
 
   tasks:
-    - name: Install Apache (Ubuntu)
-      when: ansible_facts['os_family'] == 'Debian'
-      ansible.builtin.apt:
-        name: apache2
-        update_cache: true
-        state: present         
 
-    - name: Install Apache (RHEL)
-      when: ansible_facts['os_family'] == 'RedHat'
-      ansible.builtin.dnf:
-        name: httpd
-        update_cache: true
-        state: present
+    - block:
+        - name: Install Apache (Ubuntu)
+          ansible.builtin.apt:
+            name: apache2
+            update_cache: true
+            state: present
+      rescue:
+        - name: Install Apache (RHEL)
+          ansible.builtin.dnf:
+            name: httpd
+            update_cache: true
+            state: present
 
-    - name: Set web page
-      ansible.builtin.copy:
-        src: /web/index.html
-        dest: /var/www/hrml/index.html
-      ignore_errors: true
-      register: result
+        - name: Start Apache  (RHEL)
+          ansible.builtin.service:
+            name: httpd
+            enabled: true
+            state: started
+      always:
 
-    - name: Fallback page
-      when: result.failed
-      ansible.builtin.copy:
-        content: Page not ready
-        dest: /var/www/html/index.html
+        - name: Set web page
+          ansible.builtin.copy:
+            src: /web/index.html
+            dest: /var/www/hrml/index.html
+          ignore_errors: true
+          register: result
 
-    - name: Start the Apache / HTTPD service
-      when: ansible_facts['os_family'] == 'RedHat'
-      ansible.builtin.service:
-        name: httpd
-        enabled: true
-        state: started
+        - name: Fallback page
+          when: result.failed
+          ansible.builtin.copy:
+            content: Page not ready
+            dest: /var/www/html/index.html
 
-    - name: Test Connection
-      become: false
-      ansible.builtin.uri:
-        url: http://localhost:80
-        return_content: false  # this supresses the webpage content so you don't get overflooded
-      register: web_content
-      retries: 5
-      delay: 3 # Delay 3 seconds between each retry attempt
-      until: web_content.status == 200 # 200 code means success
+        - name: Test Connection
+          become: false
+          ansible.builtin.uri:
+            url: http://localhost:80
+            return_content: false  # this supresses the webpage content so you don't get overflooded
+          register: web_content
+          retries: 5
+          delay: 3 # Delay 3 seconds between each retry attempt
+          until: web_content.status == 200 # 200 code means success
 
-    - name: Test result
-      when: web_content.status == 200
-      debug:
-        msg: 
-          - "The test was successsful, the return code is 200 for the website"
-          - "The test has been completed"
+        - name: Test result
+          when: web_content.status == 200
+          debug:
+            msg: 
+              - "The test was successsful, the return code is 200 for the website"
+              - "The test has been completed"
 
 
 
