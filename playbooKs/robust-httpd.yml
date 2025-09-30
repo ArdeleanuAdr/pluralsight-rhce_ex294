@@ -50,6 +50,13 @@
       delay: 3 # Delay 3 seconds between each retry attempt
       until: web_content.status == 200 # 200 code means success
 
+    - name: Test result
+      when: web_content.status == 200
+      debug:
+        msg: 
+          - "The test was successsful, the return code is 200 for the website"
+          - "The test has been completed"
+
 
 
 
