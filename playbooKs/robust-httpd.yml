@@ -32,3 +32,20 @@
       ansible.builtin.copy:
         content: Page not ready
         dest: /var/www/html/index.html
+
+    - name: Start the Apache / HTTPD service
+      when: ansible_facts['os_family'] == 'RedHat'
+      ansible.builtin.service:
+        name: httpd
+        enabled: true
+        state: started
+
+    - name: Test Connection
+      become: false
+      ansible.builtin.uri:
+        url: http://localhost:80
+        return_content: false  # this supresses the webpage content so you don't get overflooded
+      register: web_content
+      retries: 5
+      delay: 10 # Delay 10 seconds between each retry attempt
+      until: web_content == 200 # 200 code means success
