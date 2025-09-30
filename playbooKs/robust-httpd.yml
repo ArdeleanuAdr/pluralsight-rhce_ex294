@@ -47,5 +47,11 @@
         return_content: false  # this supresses the webpage content so you don't get overflooded
       register: web_content
       retries: 5
-      delay: 10 # Delay 10 seconds between each retry attempt
-      until: web_content == 200 # 200 code means success
+      delay: 3 # Delay 3 seconds between each retry attempt
+      until: web_content.status == 200 # 200 code means success
+
+
+
+
+
+
