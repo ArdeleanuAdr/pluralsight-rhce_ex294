@@ -12,7 +12,15 @@
 
   tasks:
     - name: Display Data
+      ignore_errors: true
       ansible.builtin.debug:
-        msg: "{{ 'Hello Ansible' | upper_case }}"
- 
-          #"{{ 'Hello Ansible' | linuxist.my_collection.upper_case  }}"
+        #msg: "{{ 'Hello Ansible' | upper_case }}"
+        msg: "{{ 'Hello Ansible' | linuxist.my_collection.upper_case }}"
+
+    - name: Create user
+      become: true
+      ansible.builtin.user:
+        name: user2
+        state: present
+        password: "{{ 'letmein2' | password_hash('sha512') }}"
+        update_password: on_create
