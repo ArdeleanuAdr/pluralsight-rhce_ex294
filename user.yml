@@ -1,0 +1,11 @@
+---
+- name: Play name
+  hosts: localhost
+  become: true
+  gather_facts: false
+  tasks:
+
+    - name: Create User
+      ansible.builtin.user:
+        name: billy
+        state: present
