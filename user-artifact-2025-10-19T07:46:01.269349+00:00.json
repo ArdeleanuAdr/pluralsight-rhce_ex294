@@ -1,0 +1,254 @@
+{
+    "plays": [
+        {
+            "___progress": "100%",
+            "__changed": 1,
+            "__failed": 0,
+            "__ignored": 0,
+            "__in progress": 0,
+            "__ok": 1,
+            "__percent_complete": 100,
+            "__play_name": "Play name",
+            "__progress": "Complete",
+            "__skipped": 0,
+            "__task_count": 1,
+            "__unreachable": 0,
+            "name": "Play name",
+            "pattern": "localhost",
+            "play": "Play name",
+            "play_pattern": "localhost",
+            "play_uuid": "b6d6cf60-3777-61cf-df7c-000000000001",
+            "playbook": "/home/ansible/pluralsight-rhce_ex294/user.yml",
+            "playbook_uuid": "50e0d78b-1483-4fe7-823b-0f1777478d69",
+            "tasks": [
+                {
+                    "__changed": true,
+                    "__duration": "0s",
+                    "__host": "localhost",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Create User",
+                    "__task_action": "ansible.builtin.user",
+                    "duration": 0.290173,
+                    "end": "2025-10-19T07:46:00.976273+00:00",
+                    "event_loop": null,
+                    "host": "localhost",
+                    "play": "Play name",
+                    "play_pattern": "localhost",
+                    "play_uuid": "b6d6cf60-3777-61cf-df7c-000000000001",
+                    "playbook": "/home/ansible/pluralsight-rhce_ex294/user.yml",
+                    "playbook_uuid": "50e0d78b-1483-4fe7-823b-0f1777478d69",
+                    "remote_addr": "127.0.0.1",
+                    "res": {
+                        "_ansible_no_log": false,
+                        "changed": true,
+                        "comment": "",
+                        "create_home": true,
+                        "group": 1000,
+                        "home": "/home/billy",
+                        "invocation": {
+                            "module_args": {
+                                "append": false,
+                                "authorization": null,
+                                "comment": null,
+                                "create_home": true,
+                                "expires": null,
+                                "force": false,
+                                "generate_ssh_key": null,
+                                "group": null,
+                                "groups": null,
+                                "hidden": null,
+                                "home": null,
+                                "local": null,
+                                "login_class": null,
+                                "move_home": false,
+                                "name": "billy",
+                                "non_unique": false,
+                                "password": null,
+                                "password_expire_max": null,
+                                "password_expire_min": null,
+                                "password_expire_warn": null,
+                                "password_lock": null,
+                                "profile": null,
+                                "remove": false,
+                                "role": null,
+                                "seuser": null,
+                                "shell": null,
+                                "skeleton": null,
+                                "ssh_key_bits": 0,
+                                "ssh_key_comment": "ansible-generated on db9d544ac6e1",
+                                "ssh_key_file": null,
+                                "ssh_key_passphrase": null,
+                                "ssh_key_type": "rsa",
+                                "state": "present",
+                                "system": false,
+                                "uid": null,
+                                "umask": null,
+                                "update_password": "always"
+                            }
+                        },
+                        "name": "billy",
+                        "shell": "/bin/bash",
+                        "state": "present",
+                        "system": false,
+                        "uid": 1000
+                    },
+                    "resolved_action": "ansible.builtin.user",
+                    "start": "2025-10-19T07:46:00.686100+00:00",
+                    "task": "Create User",
+                    "task_action": "ansible.builtin.user",
+                    "task_args": "",
+                    "task_path": "/home/ansible/pluralsight-rhce_ex294/user.yml:8",
+                    "task_uuid": "b6d6cf60-3777-61cf-df7c-000000000003",
+                    "uuid": "05a0f0ce-0047-4b7e-8f7c-0389da0f70cf"
+                }
+            ],
+            "uuid": "b6d6cf60-3777-61cf-df7c-000000000001"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/ansible/pluralsight-rhce_ex294/user.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/ansible/pluralsight-rhce_ex294"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/ansible/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "registry.redhat.io/ansible-automation-platform-25/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "tag"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/ansible/pluralsight-rhce_ex294/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "interactive",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Not set",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Defaults",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Defaults",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "\u001b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\u001b[0m",
+        "\u001b[1;35mthe implicit localhost does not match 'all'\u001b[0m",
+        "",
+        "PLAY [Play name] ***************************************************************",
+        "",
+        "TASK [Create User] *************************************************************",
+        "\u001b[0;33mchanged: [localhost]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mlocalhost\u001b[0m                  : \u001b[0;32mok=1   \u001b[0m \u001b[0;33mchanged=1   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}
