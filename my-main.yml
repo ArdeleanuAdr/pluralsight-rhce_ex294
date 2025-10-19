@@ -24,3 +24,12 @@
         state: present
         password: "{{ 'letmein2' | password_hash('sha512') }}"
         update_password: on_create
+
+    - name: Add PUPPET repository
+      become: true
+      ansible.builtin.yum_repository:
+        name: puppet
+        description: Official Puppet Repository
+        baseurl: https://yum.puppet.com/puppet8/el/9/$basearch
+        gpgkey: https://yum.puppet.com/RPM-GPG-KEY-puppet
+        state: present
