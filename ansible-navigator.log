@@ -9,3 +9,5 @@
 
 2025-10-19T07:15:08.901805+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-25/ee-supported-rhel8:latest: image not known
 
+2025-10-19T07:46:00.556576+00:00 CRITICAL 'ansible_navigator.actions.run_c9ab._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '4c336c7d-29c0-4291-8e87-a36b45276ad5', 'counter': 1, 'stdout': '\x1b[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '6cb2cb14-42a8-496e-bb78-6dd2e7126d91', 'created': '2025-10-19T07:46:00.556106+00:00'}
+2025-10-19T07:46:00.557455+00:00 CRITICAL 'ansible_navigator.actions.run_c9ab._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': 'b6940608-5857-49ef-a63a-78938e4f51f6', 'counter': 2, 'stdout': "\x1b[1;35mthe implicit localhost does not match 'all'\x1b[0m", 'start_line': 1, 'end_line': 2, 'runner_ident': '6cb2cb14-42a8-496e-bb78-6dd2e7126d91', 'created': '2025-10-19T07:46:00.556861+00:00'}
