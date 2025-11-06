@@ -1,0 +1,11 @@
+---
+- name: Simple Play
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Ping me. Test SSH and PING
+      ping:
+
+    - name: Print OS family
+      debug:
+        msg: "{{ ansible_os_family }}"
