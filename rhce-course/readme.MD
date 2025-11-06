@@ -1,3 +1,8 @@
+This directory is used for the PluralSight video tutorial for RHCE but it uses rhel 8 and an older version of ansible
+Use this just for training
+
+
+
 ======================
 Ansible consists of:
 =====================
