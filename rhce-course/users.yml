@@ -8,5 +8,7 @@ users:
     group: devops
   - username: sandy
     uid: 2201
+    group: opsmgr
   - username: patrick
     uid: 2202
+    group: devops
