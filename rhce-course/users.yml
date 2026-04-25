@@ -1,0 +1,12 @@
+---
+users:
+  - username: alice
+    group: opsmgr
+    uid: 1201
+  - username: vincent
+    uid: 1202
+    group: devops
+  - username: sandy
+    uid: 2201
+  - username: patrick
+    uid: 2202
