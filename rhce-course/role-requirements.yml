@@ -1,0 +1,6 @@
+---
+roles:
+  - src: https://github.com/tdacntr/php/archive/master.tar.gz
+    name: phpinfo
+  - src: https://github.com/tdacntr/haproxy/archive/main.tar.gz
+    name: balancer
