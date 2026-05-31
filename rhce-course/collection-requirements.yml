@@ -3,3 +3,17 @@ collections:
   - name: https://galaxy.ansible.com/download/redhat-insights-1.0.7.tar.gz
   - name: https://galaxy.ansible.com/download/community-general-5.5.0.tar.gz
   - name: https://galaxy.ansible.com/download/redhat-rhel_system_roles-1.19.3.tar.gz
+
+
+# However, for RHCE-style exams and real production environments, using collection names and versions is the preferred method because Ansible Galaxy resolves and downloads the correct artifact automatically.
+
+---
+collections:
+  - name: redhat.insights
+    version: 1.0.7
+  - name: community.general
+    version: 5.5.0
+  - name: redhat.rhel_system_roles
+    version: 1.19.3
+
+    
