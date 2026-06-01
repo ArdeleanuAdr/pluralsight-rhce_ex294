@@ -1,7 +1,7 @@
 ---
 collections:
   - name: https://galaxy.ansible.com/download/redhat-insights-1.0.7.tar.gz
-  - name: https://galaxy.ansible.com/ui/repo/published/community/general/
+  - name: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/community-general-13.0.1.tar.gz
   - name: https://galaxy.ansible.com/download/redhat-rhel_system_roles-1.19.3.tar.gz
 
   collections:
