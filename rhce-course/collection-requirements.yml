@@ -5,9 +5,9 @@ collections:
   - name: https://galaxy.ansible.com/download/redhat-rhel_system_roles-1.19.3.tar.gz
 
   collections:
-  - name: https://galaxy.ansible.com/ui/repo/published/lonemtntech/aci_fabric_manager/lonemtntech-aci_fabric_manager-1.0.5.tar.gz
-  - name: https://galaxy.ansible.com/ui/repo/published/lonemtntech/aci_fabric_policies/lonemtntech-aci_fabric_policies-1.0.4.tar.gz
-  - name: https://galaxy.ansible.com/ui/repo/published/acklendeveloper/acklen_scripts/acklendeveloper-acklen_scripts-1.0.5.tar.gz
+  - name: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/snagoor-aap_common-1.0.5.tar.gz
+  - name: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/evolix_root-ansible_roles-25.1.4.tar.gz
+  - name: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/infra-aap_utilities-3.3.0.tar.g
 
 
 # However, for RHCE-style exams and real production environments, using collection names and versions is the preferred method because Ansible Galaxy resolves and downloads the correct artifact automatically.
